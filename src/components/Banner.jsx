@@ -4,18 +4,21 @@ import banner from"../../public/Banner.jpg";
 export const Banner = () => {
   return (
    <>
-   <div className='max-w-scree-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row'>
+   <div className='max-w-scree-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10'>
     <div className='order-2 md:order-1 w-full md:w-1/2'  > 
-   <div className='space-y-12 mt-12 md:mt-32 '>
+   <div className='space-y-10 mt-12 md:mt-32 '>
    <h1 className='text-4xl font-bold'>Hello,Welcomes here to learn something {" "}
     <span className='text-pink-500'>new everyday!!!</span>
     </h1>
-   <p className='text-xl '> Welcome to EduReads – Fuel Your Mind.
-    From academic textbooks to exam guides and reference materials, we’ve got your back.
-    Curated for students, scholars, and lifelong learners.
-    Affordable prices, fast delivery, and trusted by educators nationwide.
-    Explore knowledge, one page at a time.
-    Because learning never stops.
+   <p className='text-xl '>{" "} <span className='text-pink-700'> Welcome to EduReads</span> 
+    – Fuel Your Mind.
+From academic textbooks to exam guides and reference materials, we’ve got your back.
+Curated for students, scholars, and lifelong learners.
+Affordable prices, fast delivery, and trusted by educators nationwide.
+Explore knowledge, one page at a time.
+{" "} <span className='text-pink-700'> Because learning never stops.</span> 
+
+   
     </p>
     <label className="input input-bordered flex items-center gap-2">
   <svg
@@ -33,8 +36,8 @@ export const Banner = () => {
    </div>
    <button className="btn btn-secondary mt-6">Submit</button>
      </div>
-    <div className='order-1 w-full md:w-1/2'> 
-    <img src={banner} className=" w-92 h-92" alt="" />
+    <div className=' order-1 w-full md:w-1/2'> 
+    <img src={banner} className=" w-150 h-120 " alt="" />
     </div>
    </div>
    </>

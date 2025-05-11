@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const Navbar = () => {
+function Navbar  () {
+   const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const navItems=(
     <>
     <li><a>Home</a></li>
@@ -12,8 +26,13 @@ const Navbar = () => {
   );
   return (
     <>
-    <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
-    <div className="navbar bg-base-100 shadow-sm">
+    <div  className={` max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-800 dark:text-white fixed top-0 left-0 right-0 z-50 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-pink-200 dark:bg-slate-700 dark:text-white duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+   >
+    <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +67,7 @@ const Navbar = () => {
       d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
       clipRule="evenodd" />
   </svg>
-</label>
+ </label>
   </div>
   <label className="swap swap-rotate">
   {/* this hidden checkbox controls the state */}
