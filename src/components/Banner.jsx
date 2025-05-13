@@ -36,8 +36,8 @@ Explore knowledge, one page at a time.
    </div>
    <button className="btn btn-secondary mt-6">Submit</button>
      </div>
-    <div className=' order-1 w-full md:w-1/2'> 
-    <img src={banner} className=" w-150 h-120 " alt="" />
+    <div className='mt-10 ml-1 mr-1 order-1 w-full md:w-1/2 '> 
+    <img src={banner} className=" w-130 h-110 " alt="" />
     </div>
    </div>
    </>
