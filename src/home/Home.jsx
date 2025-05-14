@@ -4,7 +4,7 @@ import { Banner } from '../components/Banner'
 import Freebook from '../components/Freebook'
 import Footer from '../components/Footer'
 
-const Home = () => {
+function Home() {
   return (
     <>
     <Navbar/>
